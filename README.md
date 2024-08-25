@@ -14,7 +14,22 @@ This project utilizes the Cartesi Rollups library to manage tasks on the Cartesi
 bash
 npm install @cartesi/rollups
 ```
+Build the Docker Image:
 
+Ensure you are in the directory where the Dockerfile is located.
+
+cartesi build
+Run the dApp:
+
+After the build is complete, run the dApp using:
+
+cartesi run
+This command will execute the dApp inside the Docker container, using the environment specified in the Dockerfile.
+
+Note:
+
+Docker Environment: Ensure you have Docker installed and running on your machine.
+INPUT VALUES: Ensure that your input values are in this format bash "{\"method\":\"menuOption\",\"request\":1}", remember you are sending it through the cli. therefore the code has accounted for you to copy and past from your JSON to String. As in inputs through cli are auto convertes to string, and the data is already a string. therefore double Json.parse in index.js line: 68
 *Usage*
 
 *Adding Tasks*
